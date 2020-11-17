@@ -7,7 +7,7 @@ function MainGenerator(props) {
         <div className="App">
             <h1>Main Generator</h1>
             <ClearAllButton />
-            <ClassOrIDInput />
+            <ClassOrIDInput classOrIdVal={props.classOrIdVal} handleClassOrIdChange={props.handleClassOrIdChange}/>
         </div>
     );
 }
