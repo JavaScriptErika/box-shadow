@@ -8,7 +8,9 @@ class App extends React.Component {
         super(props);
         this.state = {
             classOrID: '',
-            elementType: 'div'
+            elementType: 'div',
+            boxShadowRule: 'box-shadow: 10px 5px 5px red;',
+            hoverRule: 'box-shadow: 10px 5px 20px black;'
         }
     }
 
@@ -30,6 +32,8 @@ class App extends React.Component {
                     classOrID={this.state.classOrID}
                     elementType={this.state.elementType}
                     handleInputChange={this.handleInputChange}
+                    boxShadowRule={this.state.boxShadowRule}
+                    hoverRule={this.state.hoverRule}
                 />
 
             </div>
