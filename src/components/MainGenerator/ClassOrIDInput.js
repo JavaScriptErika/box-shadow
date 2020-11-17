@@ -8,14 +8,14 @@ class ClassOrIDInput extends React.Component {
     }
 
     handleOnChange = (e) => { 
-        this.props.handleClassOrIdChange(e);
+        this.props.handleInputChange(e);
     }
 
     render() {
         return (
             <div>
                 <label> CSS Class or ID: 
-                    <input type="text" value={this.props.classOrIdVal} onChange={this.handleOnChange} />
+                    <input type="text" value={this.props.classOrID} onChange={this.handleOnChange} name="classOrID"/>
                 </label>
             </div>
         )

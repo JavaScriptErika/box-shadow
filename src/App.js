@@ -6,20 +6,31 @@ import './App.css';
 class App extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { classOrIdVal: '' }
+        this.state = {
+            classOrID: '',
+            elementType: 'div'
+        }
     }
 
-    handleClassOrIdChange = (e) => {
+    handleInputChange = (e) => {
+        const target = e.target;
+        const value = target.value;
+        const name = target.name;
+
         this.setState({
-            classOrIdVal: e.target.value
-        })
+            [name]: value
+        });
     }
 
     render() {
         return (
             <div className="App">
                 <Header />
-                <MainGenerator classOrIdVal={this.state.classOrIdVal} handleClassOrIdChange={this.handleClassOrIdChange} />
+                <MainGenerator
+                    classOrID={this.state.classOrID}
+                    elementType={this.state.elementType}
+                    handleInputChange={this.handleInputChange}
+                />
 
             </div>
         );
