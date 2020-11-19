@@ -3,6 +3,7 @@ import ClearAllButton from './ClearAllButton';
 import ClassOrIDInput from './ClassOrIDInput';
 import ElementType from './ElementType';
 import CssRule from './CssRule';
+import SaveViewButton from './SaveViewButton'
 
 function MainGenerator(props) {
     return (
@@ -24,6 +25,7 @@ function MainGenerator(props) {
                 name='hoverRule'
                 title={props.elementType + ":hover"}
             />
+            <SaveViewButton />
         </div>
     );
 }

@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 
-function ClearAllButton() {
+function SaveViewButton() {
     return (
         <div className="App">
-           <button>Clear All</button>
+            <button>Save</button>
         </div>
     );
 }
 
-export default ClearAllButton;
+export default SaveViewButton;
