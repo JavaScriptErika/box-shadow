@@ -1,11 +1,24 @@
 import React, { Component } from 'react';
 
-function SaveViewButton() {
-    return (
-        <div className="App">
-            <button>Save</button>
-        </div>
-    );
+class SaveViewButton extends Component {
+
+    constructor(props) {
+        super(props)
+    }
+
+    handleOnClick = (e) => {
+        this.props.handleSaveViewClick(e);
+    }
+
+
+
+    render() {
+        return (
+            <div className="App">
+                <button onClick={this.handleOnClick}>Save</button>
+            </div>
+        );
+    }
 }
 
 export default SaveViewButton;

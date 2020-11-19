@@ -10,7 +10,8 @@ class App extends Component {
             classOrID: '',
             elementType: 'div',
             boxShadowRule: 'box-shadow: 10px 5px 5px red;',
-            hoverRule: 'box-shadow: 10px 5px 20px black;'
+            hoverRule: 'box-shadow: 10px 5px 20px black;',
+            savedViews: [],
         }
     }
 
@@ -24,6 +25,23 @@ class App extends Component {
         });
     }
 
+    handleSaveViewClick = (e) => {
+        e.preventDefault();
+
+        let addSavedView = this.state.savedViews.slice();
+        addSavedView.push({
+            'classOrID': this.state.classOrID,
+            'elementType': this.state.elementType,
+            'boxShadowRule': this.state.boxShadowRule,
+            'hoverRule': this.state.hoverRule
+        });
+
+        this.setState({
+            savedViews: addSavedView
+        })
+
+    }
+
     render() {
         return (
             <div className="App">
@@ -34,8 +52,9 @@ class App extends Component {
                     handleInputChange={this.handleInputChange}
                     boxShadowRule={this.state.boxShadowRule}
                     hoverRule={this.state.hoverRule}
+                    handleSaveViewClick={this.handleSaveViewClick}
                 />
-
+                <ul>{this.state.savedViews.map(view => <li>{view.classOrID + view.elementType + view.boxShadowRule + view.hoverRule}</li>)}</ul>
             </div>
         );
     }

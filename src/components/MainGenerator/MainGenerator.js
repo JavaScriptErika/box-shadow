@@ -4,6 +4,7 @@ import ClassOrIDInput from './ClassOrIDInput';
 import ElementType from './ElementType';
 import CssRule from './CssRule';
 import SaveViewButton from './SaveViewButton'
+import PreviewBox from './PreviewBox'
 
 function MainGenerator(props) {
     return (
@@ -25,7 +26,8 @@ function MainGenerator(props) {
                 name='hoverRule'
                 title={props.elementType + ":hover"}
             />
-            <SaveViewButton />
+            <PreviewBox />
+            <SaveViewButton handleSaveViewClick={props.handleSaveViewClick} />
         </div>
     );
 }

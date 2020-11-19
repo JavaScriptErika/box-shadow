@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 
 
-class CssRule extends Component {
+class PreviewBox extends Component {
 
     constructor(props) {
         super(props)
@@ -15,14 +15,11 @@ class CssRule extends Component {
     render() {
         return (
             <div>
-                <label>
-                    {this.props.title}
-                    <textarea value={this.props.cssRuleType} name={this.props.name} onChange={this.handleOnChange} />
-                </label>
+                Preview Box!
             </div>
         )
     }
 
 }
 
-export default CssRule;
+export default PreviewBox;
